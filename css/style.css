@@ -10,3 +10,101 @@
     --dark-shade: #252525;
 }
 
+
+/* Globals */
+body {
+    /* fonts */
+    font-family: 'IBM Plex Mono', 'Courier New', Courier, monospace;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--dark-shade);
+}
+
+h1 {
+    font-size: 40px;
+    font-family: 'IBM Plex Sans Condensed', sans-serif;
+}
+
+h2 {
+    font-size: 32px;
+}
+
+h3 {
+    font: 24px;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    color: #252525;
+    text-decoration: none;
+    border-bottom: 3px solid var(--primary-color);
+    padding-bottom: 2px;
+    transition-duration: 300ms;
+}
+
+
+
+/* Header */
+.header {
+    height: 100px;
+    background-color: #F9F9F9;
+}
+.nav {
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__links-container {
+    display: flex;
+}
+
+.nav__links-container > li {
+    margin: 0 40px;
+}
+
+.nav__icons-container {
+    display: flex;
+}
+
+.nav__icons-container > li {
+    margin: 10px;
+}
+
+.nav__icons-container a {
+    border: none;
+}
+
+.fa-brands {
+    font-size: 20px;
+    transition-duration: 300ms;
+}
+
+.fa-spotify {
+    color:#FF7D00;
+}
+
+
+
+
+/* Active States */
+a:hover {
+    padding-bottom: 0;
+}
+
+a:active {
+    color: var(--secondary-color);
+    border: none;
+}
+
+.fa-brands:hover {
+    transform: translateY(-2px);
+}
