@@ -22,7 +22,7 @@ body {
 
 h1 {
     font-size: 40px;
-    font-family: 'IBM Plex Sans Condensed', sans-serif;
+    font-weight: 500;
 }
 
 h2 {
@@ -32,6 +32,7 @@ h2 {
 h3 {
     font: 24px;
 }
+
 
 ul, li {
     list-style: none;
@@ -47,8 +48,16 @@ a {
     transition-duration: 300ms;
 }
 
+.accent--secondary {
+    color: #FF7D00;
+}
 
 
+/* page-container */
+.page-container {
+    padding-bottom: 100px;
+    min-height: 100vh;
+}
 /* Header */
 .header {
     height: 100px;
@@ -91,6 +100,112 @@ a {
 .fa-spotify {
     color:#FF7D00;
 }
+
+/* Banner */
+
+.banner-container {
+    margin: 10% auto;
+    display: flex;
+    width: 70%;
+    border:2px solid var(--dark-shade);
+    box-shadow: 15px 15px 0 var(--primary-color);
+}
+
+.banner__content {
+    width: 100%;
+    padding: 40px;
+    background-color: var(--light-shade) ;
+}
+
+.banner__image {
+    width: 40%;
+    max-width:400px;
+    object-fit: cover;
+}
+
+#firstline-accent:first-line
+ {
+    font-size: 4rem;
+}
+
+#banner__btn {
+    display: inline-block;
+    margin: 0 auto;
+}
+
+
+
+
+.about-me {
+    
+}
+.about-me-container {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    width: 70%;
+    background-color: #F9F9F9;
+    border: 2px solid var(--dark-shade);
+}
+
+.about-me__content {
+    padding: 40px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* footer */
+footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background-color: var(--light-shade);
+    font-size: 16px;
+}
+
+.footer-container {
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.footer__right {
+    width: 30%;
+}
+
+.footer__links {
+    width: 30%;
+}
+
+.footer__links-container {
+    display: flex;
+    justify-content: space-between; 
+}
+
+
+
+
+
+
+
+
+
+
+
 
 
 
