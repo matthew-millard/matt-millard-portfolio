@@ -1,1 +1,14 @@
-import '@fontsource/ia-writer-mono'
+
+
+
+
+// Smooth scrolling - internal hyperlinks.
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+	anchor.addEventListener('click', function (e) {
+		e.preventDefault()
+
+		document.querySelector(this.getAttribute('href')).scrollIntoView({
+			behavior: 'smooth',
+		})
+	})
+})
