@@ -1,4 +1,5 @@
 /* Global Resets */
+/* Adapted from Andy Bell - andy-bell.co.uk/a-modern-css-reset */
 *,
 *::before,
 *::after {
@@ -39,4 +40,8 @@ button,
 textarea,
 select {
   font: inherit;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
 }
