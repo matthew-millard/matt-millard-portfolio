@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,17 +14,19 @@
     <link rel="stylesheet" href="./css/style.css">
     <title>Matt Millard | Software Engineer</title>
 </head>
-<body>
-    <div class="page-container">
 
+
+<body>
+<!-- page-container -->
+    <div class="page-container">
 
 <!-- Header -->
         <header class="header">
-            <nav class="nav" >
+            <nav class="nav container" >
                 <div class="nav__logo"><span>Matt Millard</span></div>
         
                 <div class="nav__links">
-                    <ul class="nav__links-container" >
+                    <ul class="container" >
                         <li><a href="#projects">Portfolio</a></li>
                         <li><a href="#about-me">About Me</a></li>
                         <li><a href="#contact-me">Contact</a></li>
@@ -32,107 +35,78 @@
                 </div>
         
                 <div class="nav__icons">
-                    <ul class="nav__icons-container">
+                    <ul class="container">
                         <li><a href="https://github.com/matthew-millard" target="_blank"><i class="fa-brands fa-github"></i></a></li>
                         <li><a href="https://www.linkedin.com/in/matthew-millard-ab7b90250/" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
                         <li><a href=""><i class="fa-brands fa-twitch"></i></a></li>
                         <li><a href="https://twitter.com/_MattMillard"><i class="fa-brands fa-twitter"></i></a></li>
-                        <li><a href="https://open.spotify.com/playlist/37i9dQZF1DX5trt9i14X7j" target="_blank"><i class="fa-brands fa-spotify"></i></a></li>
+                        <li><a href="https://open.spotify.com/playlist/37i9dQZF1DX5trt9i14X7j" target="_blank"><i class="fa-brands fa-spotify highlight"></i></a></li>
                     </ul>
                 </div>
             </nav>
         </header>
 
-
-
-        <div class="banner-container">
+<!-- Banner -->
+        <section class="banner container box-shadow-blue">
             <div class="banner__content">
-                <h2 id="firstline-accent">Hi, I'm Matt.<br>Welcome to my website.<br>I am a <span class="accent--secondary">MERN</span> Stack Engineer living in Ottawa, Canada</h2>
+                <h1 id="banner__title">Hi, I'm Matt.<br>Welcome to my website.</h1> 
                 <br>
-                <div id="banner__btn"><a class="btn" href="#">Projects</a></div>
+                <h2>I am a junior <span class="highlight">Full Stack</span>  web developer, living in Ottawa, Canada</h2>
+                <br>
+                <a class="" href="#projects">Projects</a>
             </div>
-            <img class="banner__image" src="./images/matt-millard-1024px-1x1.jpg" alt="A black and white headshot of Matt Millard.">
-        </div>
+            <img class="banner__image" src="./images/matt-millard-1024px-1x1.jpg" alt="A black and white headshot of Matt.">
+        </section>
 
-
-
-
-
-
-
-        <main class="projects" id="projects">
-            <div class="projects-container">
-                <div class="project__image project__image--main
-                "><a href="https://www.google.com" target="_blank"><img id="first-image" src="./images/desktop-screenshot-newsletter-signup-card-1024px-1x1.jpg" alt=""></a>
-                </div>
-
+<!-- Projects -->
+        <main class="projects container" id="projects">
+                <a href="https://www.google.com" target="_blank"><img id="first-image" src="./images/desktop-screenshot-newsletter-signup-card-1440px-1x1.jpg" alt="Screenshot of a email notification sign-up for a clothing brand."></a>
                 <a href="https://www.google.com" target="_blank"><img src="./images/desktop-screenshot-interactive-rating-component-1024px-1x1.jpg" alt="Screenshot of a interactive rating component."></a>
-
                 <a href="https://www.google.com" target="_blank"><img src="./images/desktop-screenshot-form-validation-component-1024px-1x1.jpg" alt="Screenshot of a form validation component."></a>
-
                 <a href="https://www.google.com" target="_blank"><img src="./images/desktop-screenshot-interactive-rating-component-1024px-1x1.jpg" alt="Screenshot of a interactive rating component."></a>
-
                 <a href="https://www.google.com" target="_blank"><img src="./images/desktop-screenshot-nft-card-1024px-1x1.jpg" alt="Screenshot of a NFT card."></a>
-
                 <a href="https://www.google.com" target="_blank"><img src="./images/desktop-screenshot-order-summary-component-1024px-1x1.jpg" alt="Screenshot of a order summary component."></a>
-
                 <a href="https://www.google.com" target="_blank"><img src="./images/desktop-screenshot-form-validation-component-1024px-1x1.jpg" alt="Screenshot of a form validation component."></a>
-            </div>
+                <a href="https://www.google.com" target="_blank"><img src="./images/desktop-screenshot-order-summary-component-1024px-1x1.jpg" alt="Screenshot of a order summary component."></a>
+                <a href="https://www.google.com" target="_blank"><img src="./images/desktop-screenshot-form-validation-component-1024px-1x1.jpg" alt="Screenshot of a form validation component."></a>
         </main>
 
 
-
-
-
-
-
-
-
-
-
-
-
-        <section class="about-me" id="about-me">
-            <div class="about-me-container">
+<!-- About Me -->
+        <section class="about-me container" id="about-me">
                 <div class="about-me__content">
                     <h3 class="about-me__title" >About Me</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos consectetur minima eligendi cum reprehenderit debitis omnis maiores facere minus magnam explicabo optio deleniti quasi blanditiis vero culpa, laudantium qui! Aliquid.</p>
                     <br>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos consectetur minima eligendi cum reprehenderit debitis omnis maiores facere minus magnam explicabo optio deleniti quasi blanditiis vero culpa, laudantium qui! Aliquid.</p>
                 </div>
-            </div>
         </section>
 
         
-
-
-
-
-        <!-- Contact Me -->
-
+<!-- Contact Me -->
         <section class="contact-me" id="contact-me">
-            <form class="contact-me__container" action="">
-                <div class="contact-me__title input">
+            <form class="contact-me__form container" action="">
+                <div class="contact-me__title details">
                     <h3>Contact Me</h3>
                 </div>
 
-                <div class="contact-me__name input">
+                <div class="contact-me__name details">
                     <label for="name"></label>
                     <input type="text" id="name" placeholder="My Name Is" required>
                 </div>
 
-                <div class="contact-me__email input">
+                <div class="contact-me__email details">
                     <label for="email"></label>
                     <input type="email" id="email" placeholder="My Email Is" required>
                 </div>
 
-                <div class="contact-me__phone input">
+                <div class="contact-me__phone details">
                     <label for="phone"></label>
                     <input type="tel" id="phone" placeholder="My Number Is">
                 </div>
 
-                <div class="contact-me__subject input">
-                    <label for="subject"></label>
+                <div class="contact-me__subject details">
+                    <label for="subject">Subject Line</label>
                     <select id="subject">
                         <option value="hire">Hire</option>
                         <option value="hire">Collaborate</option>
@@ -141,9 +115,9 @@
                     </select>
                 </div>
 
-                <div class="contact-me__message input"><textarea name="message" id="message" placeholder="Message"></textarea></div>
+                <div class="contact-me__message details"><textarea name="message" id="message" placeholder="Message"></textarea></div>
 
-                <div class="contact-me__submit input"><button type="submit" onclick="submitMessage()">Send</button></div>
+                <div class="contact-me__submit"><button type="submit" onclick="submitMessage()">Send</button></div>
 
 
             </form>
@@ -181,7 +155,7 @@
                         <li><a href=""><i class="fa-brands fa-linkedin"></i></a></li>
                         <li><a href=""><i class="fa-brands fa-twitch"></i></a></li>
                         <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
-                        <li><a href=""><i class="fa-brands fa-spotify"></i></a></li>
+                        <li><a href=""><i class="fa-brands fa-spotify highlight"></i></a></li>
                     </ul>
                 </div>
        
