@@ -19,8 +19,8 @@ body {
 }
 
 h1 {
-    /* font-size: 32px;
-    font-weight: 500; */
+    font-size: 40px;
+    font-weight: 700;
 }
 
 h2 {
@@ -38,6 +38,7 @@ ul, li {
     padding: 0;
 }
 
+/* Link styling */
 a {
     color: var(--dark-shade);
     text-decoration: none;
@@ -46,8 +47,19 @@ a {
     transition-duration: 250ms;
 }
 
-.accent--secondary {
-    color: #FF7D00;
+/* Removes border bottom styling from <a> elements that contain img elements as children. */
+a:has(img) {
+    border-bottom: none;
+}
+
+/* Global Effects */
+.highlight {
+    color: var(--secondary-color);
+}
+
+.box-shadow-blue {
+    border:2px solid var(--dark-shade);
+    box-shadow: 15px 15px 0 var(--primary-color);
 }
 
 
@@ -60,6 +72,18 @@ a {
     flex-direction: column;
     align-items: center;
 }
+
+/* Flexbox Container */
+.container {
+    display: flex;
+}
+
+/* Grid Container */
+.grid-container {
+    display: grid;
+}
+
+
 /* Header */
 .header {
     width: 100%;
@@ -70,7 +94,6 @@ a {
     margin: 0 auto;
     width: 90%;
     height: 100%;
-    display: flex;
     justify-content: space-between;
     align-items: center;
 }
@@ -80,47 +103,37 @@ a {
     font-weight: 500;
 }
 
-.nav__links-container {
-    display: flex;
-}
-
-.nav__links-container > li {
+.nav__links ul > li {
     margin: 0 40px;
 }
 
-.nav__icons-container {
-    display: flex;
-}
 
-.nav__icons-container > li {
+.nav__icons ul > li {
     margin: 10px;
 }
 
-.nav__icons-container a {
+.nav__icons li > a {
     border: none;
 }
 
-.fa-brands {
+i[class~='fa-brands'] {
     font-size: 20px;
-    transition-duration: 300ms;
+    transition-duration: 250ms;
 }
 
-.fa-spotify {
-    color:#FF7D00;
-}
+/* ******** Left here,  */
+
+
+
 
 /* Banner */
 
-.banner-container {
-    margin: 10% auto;
-    display: flex;
-    width: 70%;
-    border:2px solid var(--dark-shade);
-    box-shadow: 15px 15px 0 var(--primary-color);
+.banner {
+    margin: 10% 0;
+    width: 70%; /* Mobile may require max-width */
 }
 
 .banner__content {
-    width: 100%;
     padding: 40px;
     background-color: var(--light-shade) ;
 }
@@ -131,61 +144,38 @@ a {
     object-fit: cover;
 }
 
-#firstline-accent:first-line
+#banner__title:first-line
  {
     font-size: 4rem;
 }
 
-#banner__btn {
-    display: inline-block;
-    margin: 0 auto;
-}
 
 
-
-
-/* Images */
+/* Project Examples */
 .projects {
-    margin-bottom: 10%; /* Possible to group */
-    
-    
-}
-.projects-container {
-    margin: 0 auto;
     width: 70%;
-    display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
     gap: 10px;
+    margin-bottom: 10%;
 }
 
-#first-image {
-    width: 2048px;
-    /* border-radius: 1rem; */
+.projects a:first-child {
     flex: 1 1 auto;
 }
 
-.projects-container a {
-    width: 300px;
+.projects a:not(:first-child) {
     flex: 1 1 300px;
-    border-bottom: none;
-    padding-bottom: 0;
 }
 
 
-
-/* About Me */
 .about-me {
-    margin-bottom: 10%; /* Possible to group */
-}
-.about-me-container {
-    margin: 0 auto;
-    display: flex;
     justify-content: center;
     width: 70%;
     background-color: #F9F9F9;
     border: 2px solid var(--dark-shade);
     box-shadow: -15px 15px 0 var(--secondary-color);
+    margin-bottom: 10%;
 }
 
 .about-me__content {
@@ -204,71 +194,81 @@ a {
 
 /* Contact Me */
 .contact-me {
-    margin-bottom: 10%; /* Possible to group */
-    width: 70%;
+    width: 90%;
+    max-width: 800px;
     background-color: var(--light-shade);
     border: 2px solid var(--dark-shade);
     box-shadow: 15px 15px 0 var(--primary-color);
+    margin-bottom: 10%;
+    
 }
 
-.contact-me__container {
-    width: 90%;
-    max-width: 1000px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(5, auto);
-    padding: 40px;
+.contact-me__form {
+    flex-direction: column;
+    
 }
 
-.contact-me__title {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    padding-bottom: 40px;
+.details > * {
+    display: block;
+    width: 100%; 
+    margin: 20px;
+    border: 2px solid var(--dark-shade);
 }
 
-.contact-me__name {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    /* background-color: #089CE7; */
+
+[type='text']:focus, 
+[type='email']:focus, 
+[type='tel']:focus, 
+textarea:focus {
+	outline: 2px solid var(--secondary-color);    
 }
 
-.contact-me__email {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    /* background-color: #FF7D00; */
+select {
+    background: url('https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-arrow-down-32.png') no-repeat right;
+    outline: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+  }
+
+textarea {
+    resize: none;
 }
 
-.contact-me__phone {
-    grid-column-start: 1;
-    grid-column-end: 2;
-    grid-row-start: 3;
-    /* background-color: #83C7EA; */
+select::-ms-expand {
+    display: none;
+  }
+
+::-webkit-input-placeholder {
+	color: var(--dark-shade);
 }
 
-.contact-me__subject {
-    grid-column-start: 2;
-    grid-column-end: 3;
-    grid-row-start: 3;
-    /* background-color: #252525; */
+:-moz-placeholder { 
+	color: var(--dark-shade);
+	opacity: 1;
 }
 
-.contact-me__message {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 4;
-    /* background-color: aqua; */
+::-moz-placeholder {
+	color: var(--dark-shade);
+	opacity: 1;
 }
 
-.contact-me__submit {
-    grid-column-start: 1;
-    grid-column-end: 3;
-    grid-row-start: 5;
-    grid-row-end: 6
+:-ms-input-placeholder {
+	color: var(--dark-shade);
 }
 
-.input > * {
-    width: 100%;  
+
+button {
+    text-transform: uppercase;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    -ms-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
+
+
+
+
 
 
 
